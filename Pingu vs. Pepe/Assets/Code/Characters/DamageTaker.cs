@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+[AddComponentMenu("Characters/Damage Taker")]
 class DamageTaker : MonoBehaviour {
     [SerializeField]
     private float maxHealth;
