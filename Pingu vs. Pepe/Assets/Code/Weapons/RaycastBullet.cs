@@ -20,7 +20,9 @@ class RaycastBullet : Bullet {
                 hitDamageTaker.takeDamage(damage);
             }
 
-            Instantiate<GameObject>(hitParticles, hit.point, Quaternion.Euler(hit.normal));
+            Debug.DrawLine(startPos, hit.point);
+
+            Instantiate(hitParticles, hit.point, Quaternion.Euler(hit.normal));
         }
     }
 }

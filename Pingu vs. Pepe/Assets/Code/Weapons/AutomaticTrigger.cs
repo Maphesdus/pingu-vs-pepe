@@ -37,7 +37,7 @@ public class AutomaticTrigger : MonoBehaviour {
 	
 	void Update() {
 		if(Input.GetButton("Fire1") && Time.time > lastBulletTime + secondsBetweenBullets) {
-            bullet.fire(bulletSpawnTransform.position, transform.forward);
+            bullet.fire(bulletSpawnTransform.position, bulletSpawnTransform.forward);
             lastBulletTime = Time.time;
         }
 	}
