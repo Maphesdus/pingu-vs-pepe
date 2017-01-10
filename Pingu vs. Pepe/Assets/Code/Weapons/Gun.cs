@@ -7,7 +7,8 @@ using UnityEngine;
 /// </summary>
 /// This class only stores information about the gun's clip size and number of total bullets. If I wanted to be modular
 /// and plan properly I might make the clip information a separate component, but I'm not super into that idea
-public class Gun : MonoBehaviour {
+[RequireComponent(typeof(Bullet))]
+public abstract class Gun : MonoBehaviour {
     /// <summary>
     /// When the player has may ammo for this gun, how many bullets do they have?
     /// </summary>
@@ -20,8 +21,19 @@ public class Gun : MonoBehaviour {
     [SerializeField]
     protected int bulletsPerClip;
 
+    /// <summary>
+    /// The Transform that bullets should start from. Should be located a little bit in front of the gun's muzzle
+    /// </summary>
+    [SerializeField]
+    protected Transform bulletSpawnTransform;
+
     protected int curBulletsInClip;
     protected int curBulletsNotInClip;
+    protected Bullet bullet;
+
+    public void Start() {
+        bullet = GetComponent<Bullet>();
+    }
 
     public int getBulletsInClip() {
         return curBulletsInClip;
@@ -29,5 +41,15 @@ public class Gun : MonoBehaviour {
 
     public int getBulletsNotInClip() {
         return curBulletsNotInClip;
+    }
+
+    private void reload() {
+        if(curBulletsNotInClip > 0) {
+            int bulletsNeededForFullClip = bulletsPerClip - curBulletsInClip;
+            int bulletsToAdd = Mathf.Min(curBulletsNotInClip, bulletsNeededForFullClip);    // Can't add more bullets than we have!
+
+            curBulletsInClip += bulletsToAdd;
+            curBulletsNotInClip -= bulletsToAdd;
+        }
     }
 }
