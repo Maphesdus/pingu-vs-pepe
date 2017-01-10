@@ -5,6 +5,7 @@ using UnityEngine;
 /// <summary>
 /// Allows a character to throw a grenade
 /// </summary>
+[AddComponentMenu("Weapons/Grenade Thrower")]
 public class GrenadeThrower : MonoBehaviour {
     [SerializeField]
     private GameObject grenadePrefab;

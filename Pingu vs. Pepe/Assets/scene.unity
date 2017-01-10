@@ -1123,6 +1123,49 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300008, guid: b30278a00d2ae1f4fa91f428d42ab2b1, type: 3}
+--- !u!1 &1576380537
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1576380538}
+  - component: {fileID: 1576380539}
+  m_Layer: 0
+  m_Name: Granade Spawn Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1576380538
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1576380537}
+  m_LocalRotation: {x: -0.33634833, y: -0, z: -0, w: 0.9417377}
+  m_LocalPosition: {x: 0, y: 1.05, z: 0.5009999}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2027181639}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: -39.309002, y: 0, z: 0}
+--- !u!114 &1576380539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1576380537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da6cab7a6e73cde43afd4ac75de06914, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grenadePrefab: {fileID: 1695429784932756, guid: 69b5aeb28b5d1d5429a3b0c68ae57e79,
+    type: 2}
+  throwForce: 5
 --- !u!1 &1615367154 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100008, guid: b30278a00d2ae1f4fa91f428d42ab2b1, type: 3}
