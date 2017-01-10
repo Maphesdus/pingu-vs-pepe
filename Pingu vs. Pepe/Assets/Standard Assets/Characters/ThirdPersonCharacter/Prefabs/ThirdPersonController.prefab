@@ -3265,8 +3265,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e287802a043f3654c862719fbaac61dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
-  range: 100
+  damage: 5
+  range: 1000
   hitParticles: {fileID: 1978342688411008, guid: 4c5af9d00e6d7704b99027c35265b951,
     type: 2}
 --- !u!114 &114038078871853598
@@ -3303,6 +3303,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletsPerSecond: 5
-  numBulletsTotal: 0
-  bulletsPerClip: 20
+  numBulletsTotal: 210
+  bulletsPerClip: 30
   bulletSpawnTransform: {fileID: 4741476259256178}
