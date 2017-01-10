@@ -13,7 +13,7 @@ class HumanInput : MonoBehaviour {
         // these messages, and I don't want to deal with methods which may or may not exist
         if(Input.GetButtonDown("Fire1")) {
             BroadcastMessage("startFiring");
-        } else if(Input.GetButtonDown("Fire1")) {
+        } else if(Input.GetButtonUp("Fire1")) {
             BroadcastMessage("stopFiring");
         }
 
