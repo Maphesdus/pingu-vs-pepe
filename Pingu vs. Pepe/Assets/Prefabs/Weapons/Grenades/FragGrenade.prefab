@@ -109,7 +109,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifetime: 3
-  replacement: {fileID: 0}
+  replacement: {fileID: 1988658166767016, guid: bbba03304fd075c4fa925a55b300397f,
+    type: 2}
 --- !u!135 &135447831713972932
 SphereCollider:
   m_ObjectHideFlags: 1
