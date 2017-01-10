@@ -89,8 +89,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4391058410872994}
-  - component: {fileID: 114065266476838720}
   - component: {fileID: 114430218043320406}
+  - component: {fileID: 114065266476838720}
   m_Layer: 0
   m_Name: AK-47
   m_TagString: Untagged
@@ -131,7 +131,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1997526818694370}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0.6, y: 0, z: 0}
+  m_LocalPosition: {x: -2.5124664, y: 0.793, z: 12.326172}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4472751107033368}
@@ -357,8 +357,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e287802a043f3654c862719fbaac61dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
-  range: 100
+  damage: 5
+  range: 1000
   hitParticles: {fileID: 1978342688411008, guid: 4c5af9d00e6d7704b99027c35265b951,
     type: 2}
 --- !u!114 &114430218043320406
@@ -373,5 +373,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletsPerSecond: 5
-  bulletsPerClip: 20
+  numBulletsTotal: 210
+  bulletsPerClip: 30
   bulletSpawnTransform: {fileID: 4237797019450792}
