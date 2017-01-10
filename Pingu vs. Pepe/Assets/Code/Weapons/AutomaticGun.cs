@@ -8,24 +8,12 @@ using UnityEngine;
 /// Bullets are their own script, which is called by this one
 [AddComponentMenu("Guns/Automatic Gun")]
 [RequireComponent(typeof(Bullet))]
-public class AutomaticGun : MonoBehaviour {
+public class AutomaticGun : Gun {
     /// <summary>
     /// How many bullets this gun fires in one second
     /// </summary>
     [SerializeField]
     private float bulletsPerSecond;
-
-    /// <summary>
-    /// When the player has may ammo for this gun, how many bullets do they have?
-    /// </summary>
-    [SerializeField]
-    private int numBulletsTotal;
-
-    /// <summary>
-    /// How many bullets are stored in one clip of this gun
-    /// </summary>
-    [SerializeField]
-    private int bulletsPerClip;
 
     /// <summary>
     /// The Transform that bullets should start from. Should be located a little bit in front of the gun's muzzle
@@ -35,9 +23,7 @@ public class AutomaticGun : MonoBehaviour {
 
     private float lastBulletTime = 0;
     private Bullet bullet;
-    private int curBulletsInClip;
-    private int curBulletsNotInClip;
-    
+        
     private float secondsBetweenBullets;
 
     private bool firing = false;
@@ -65,7 +51,7 @@ public class AutomaticGun : MonoBehaviour {
     private void reload() {
         if(curBulletsNotInClip > 0) {
             int bulletsNeededForFullClip = bulletsPerClip - curBulletsInClip;
-            int bulletsToAdd = Mathf.Max(curBulletsNotInClip, bulletsNeededForFullClip);    // Can't add more bullets than we have!
+            int bulletsToAdd = Mathf.Min(curBulletsNotInClip, bulletsNeededForFullClip);    // Can't add more bullets than we have!
 
             curBulletsInClip += bulletsToAdd;
             curBulletsNotInClip -= bulletsToAdd;
@@ -75,6 +61,10 @@ public class AutomaticGun : MonoBehaviour {
 	private void Update() {
         bool isTimeForAnotherBullet = Time.time > lastBulletTime + secondsBetweenBullets;
         bool areBulletsInClip = curBulletsInClip > 0;
+
+        if(!areBulletsInClip) {
+            firing = false;
+        }
 
         if(firing && isTimeForAnotherBullet && areBulletsInClip) {
             bullet.fire(bulletSpawnTransform.position, bulletSpawnTransform.forward);
