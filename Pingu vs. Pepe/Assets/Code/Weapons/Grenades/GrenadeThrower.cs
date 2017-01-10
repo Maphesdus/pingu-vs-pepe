@@ -13,9 +13,9 @@ public class GrenadeThrower : MonoBehaviour {
     [SerializeField]
     private float throwForce;
 
-	public void throwGrenade(Vector3 startPos, Vector3 direction) {
-        GameObject grenade = Instantiate(grenadePrefab, startPos, Quaternion.identity);
+	public void throwGrenade() {
+        GameObject grenade = Instantiate(grenadePrefab, transform.position, Quaternion.identity);
         Rigidbody grenadeRigidbody = grenade.GetComponent<Rigidbody>();
-        grenadeRigidbody.AddForce(throwForce * direction);
+        grenadeRigidbody.AddForce(throwForce * transform.forward, ForceMode.Impulse);
     }
 }
