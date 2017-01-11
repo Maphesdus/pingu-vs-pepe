@@ -23,11 +23,6 @@ public class AutomaticGun : Gun {
     private new void Start() {
         base.Start();
         secondsBetweenBullets = 1.0f / bulletsPerSecond;
-        curBulletsInClip = bulletsPerClip;
-        curBulletsNotInClip = numBulletsTotal - curBulletsInClip;
-        if(bullet == null) {
-            Debug.LogError("There is no bullet component attached to this gun. Please attach a bullet component");
-        }
     }
 
     private void startFiring() {
@@ -47,7 +42,7 @@ public class AutomaticGun : Gun {
         }
 
         if(firing && isTimeForAnotherBullet && areBulletsInClip) {
-            bullet.fire(bulletSpawnTransform.position, bulletSpawnTransform.forward);
+            bulletSpawner.fire(bulletSpawnTransform.position, bulletSpawnTransform.forward);
             lastBulletTime = Time.time;
             curBulletsInClip--;
         }

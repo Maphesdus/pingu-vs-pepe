@@ -7,7 +7,7 @@ using UnityEngine;
 /// </summary>
 /// This class only stores information about the gun's clip size and number of total bullets. If I wanted to be modular
 /// and plan properly I might make the clip information a separate component, but I'm not super into that idea
-[RequireComponent(typeof(Bullet))]
+[RequireComponent(typeof(BulletSpawner))]
 public abstract class Gun : MonoBehaviour {
     /// <summary>
     /// When the player has may ammo for this gun, how many bullets do they have?
@@ -29,10 +29,16 @@ public abstract class Gun : MonoBehaviour {
 
     protected int curBulletsInClip;
     protected int curBulletsNotInClip;
-    protected Bullet bullet;
+    protected BulletSpawner bulletSpawner;
 
     public void Start() {
-        bullet = GetComponent<Bullet>();
+        curBulletsInClip = bulletsPerClip;
+        curBulletsNotInClip = numBulletsTotal - curBulletsInClip;
+
+        bulletSpawner = GetComponent<BulletSpawner>();
+        if(bulletSpawner == null) {
+            Debug.LogError("There is no bullet component attached to this gun. Please attach a bullet component");
+        }
     }
 
     public int getBulletsInClip() {
