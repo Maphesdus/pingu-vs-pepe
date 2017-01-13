@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Bullet : MonoBehaviour {
+public abstract class BulletSpawner : MonoBehaviour {
     [SerializeField]
     protected float damage;
 

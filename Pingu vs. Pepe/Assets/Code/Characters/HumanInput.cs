@@ -12,13 +12,13 @@ class HumanInput : MonoBehaviour {
         // Using BroadcastMessage instead of an object reference because some guns might want to respond to only one of
         // these messages, and I don't want to deal with methods which may or may not exist
         if(Input.GetButtonDown("Fire1")) {
-            BroadcastMessage("startFiring");
+            BroadcastMessage("startFiring", SendMessageOptions.DontRequireReceiver);
         } else if(Input.GetButtonUp("Fire1")) {
-            BroadcastMessage("stopFiring");
+            BroadcastMessage("stopFiring", SendMessageOptions.DontRequireReceiver);
         }
 
         if(Input.GetButtonDown("Reload")) {
-            BroadcastMessage("reload");
+            BroadcastMessage("reload", SendMessageOptions.DontRequireReceiver);
         }
 
         if(Input.GetButtonDown("Grenade")) {

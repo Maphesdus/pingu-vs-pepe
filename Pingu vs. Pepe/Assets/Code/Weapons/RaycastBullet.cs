@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 
-[AddComponentMenu("Guns/Bullets/Raycast Bullet")]
-class RaycastBullet : Bullet {
+[AddComponentMenu("Weapons/Bullets/Raycast Bullet")]
+class RaycastBullet : BulletSpawner {
     /// <summary>
     /// The particle effect to show when the bullet hits something
     /// </summary>
