@@ -11,6 +11,6 @@ public class Lifetime : MonoBehaviour {
     private float lifetime;
 
 	void Start () {
-        Destroy(this, lifetime);
+        Destroy(gameObject, lifetime);
 	}
 }
