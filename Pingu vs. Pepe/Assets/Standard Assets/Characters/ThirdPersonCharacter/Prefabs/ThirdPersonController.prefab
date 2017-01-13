@@ -660,6 +660,7 @@ GameObject:
   - component: {fileID: 11444856}
   - component: {fileID: 11469404}
   - component: {fileID: 114561372386676026}
+  - component: {fileID: 114422647658550086}
   m_Layer: 0
   m_Name: ThirdPersonController
   m_TagString: Untagged
@@ -3265,8 +3266,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e287802a043f3654c862719fbaac61dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
-  range: 100
+  damage: 5
+  range: 1000
   hitParticles: {fileID: 1978342688411008, guid: 4c5af9d00e6d7704b99027c35265b951,
     type: 2}
 --- !u!114 &114038078871853598
@@ -3280,6 +3281,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dba085291dacce4ba48ba64bf5a265a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114422647658550086
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 149790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9b132170b417c945952487d34df9972, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clipCounter: {fileID: 0}
+  ammoCounter: {fileID: 0}
 --- !u!114 &114561372386676026
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3302,7 +3316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 446656b5f25f9614eba7dbbd0803e42f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numBulletsTotal: 210
+  bulletsPerClip: 30
   bulletsPerSecond: 5
-  numBulletsTotal: 0
-  bulletsPerClip: 20
   bulletSpawnTransform: {fileID: 4741476259256178}

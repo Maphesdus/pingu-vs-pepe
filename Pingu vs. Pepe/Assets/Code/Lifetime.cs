@@ -9,8 +9,19 @@ using UnityEngine;
 public class Lifetime : MonoBehaviour {
     [SerializeField]
     private float lifetime;
+    
+    [SerializeField]
+    private GameObject replacement;
 
-	void Start () {
-        Destroy(gameObject, lifetime);
-	}
+    [SerializeField]
+    private Vector3 replacementOffset;
+
+    IEnumerator Start() {
+        //Debug.Break();
+        yield return new WaitForSeconds(lifetime);
+        if(replacement) {
+            Instantiate(replacement, transform.position + replacementOffset, transform.rotation);
+        }
+        Destroy(gameObject);
+    }
 }
