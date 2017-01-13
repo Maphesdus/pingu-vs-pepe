@@ -20,5 +20,9 @@ class HumanInput : MonoBehaviour {
         if(Input.GetButtonDown("Reload")) {
             BroadcastMessage("reload");
         }
+
+        if(Input.GetButtonDown("Grenade")) {
+            BroadcastMessage("throwGrenade");
+        }
     }
 }
