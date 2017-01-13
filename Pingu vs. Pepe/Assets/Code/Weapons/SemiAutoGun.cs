@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[AddComponentMenu("Weapons/Semi-auto Gun")]
 public class SemiAutoGun : Gun {
     [SerializeField]
     private float bulletsPerSecond;
@@ -20,6 +21,7 @@ public class SemiAutoGun : Gun {
 
         if(hasBullets && canFireAgain) {
             bulletSpawner.fire(bulletSpawnTransform.position, bulletSpawnTransform.forward);
+            curBulletsInClip--;
         }
     }
 }

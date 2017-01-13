@@ -6,6 +6,7 @@ using UnityEngine;
 /// <summary>
 /// Spawns a GameObeject for each bullet fired
 /// </summary>
+[AddComponentMenu("Weapons/Bullets/Projectile Bullet ")]
 public class ProjectileBullet : BulletSpawner {
     /// <summary>
     /// The prefab to spawn when this gun is fired
@@ -14,6 +15,7 @@ public class ProjectileBullet : BulletSpawner {
     private GameObject projectile;
 
     public override void fire(Vector3 startPos, Vector3 direction) {
-        Instantiate(projectile, startPos, Quaternion.LookRotation(direction, transform.up));
+        Instantiate(projectile, startPos, Quaternion.LookRotation(direction));
+        //Debug.Break();
     }
 }
