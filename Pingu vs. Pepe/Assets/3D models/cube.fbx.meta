@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: a26ab7bcd8233dd49a369e50b493ad18
-timeCreated: 1484388288
+guid: 2215e227d68258b49af48e9d04f7cde3
+timeCreated: 1484595831
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -9,7 +9,8 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: PinguHead
+    4300000: cube
+    6400000: //RootNode
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -35,9 +36,9 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 10
+    globalScale: 70
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0

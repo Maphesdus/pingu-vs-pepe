@@ -19,6 +19,19 @@ public class Lifetime : MonoBehaviour {
     IEnumerator Start() {
         //Debug.Break();
         yield return new WaitForSeconds(lifetime);
+        die();
+    }
+
+    public void die() {
+        transform.DetachChildren();
+        ParticleSystem[] particles = GetComponentsInChildren<ParticleSystem>();
+        foreach(ParticleSystem p in particles) {
+            Lifetime lifetime = p.GetComponent<Lifetime>();
+            if(lifetime != null) {
+                lifetime.enabled = true;
+            }
+        }
+
         if(replacement) {
             Instantiate(replacement, transform.position + replacementOffset, transform.rotation);
         }

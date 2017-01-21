@@ -7,6 +7,18 @@ using UnityEngine;
 [AddComponentMenu("Weapons/Bullets/Raycast Bullet")]
 class RaycastBullet : BulletSpawner {
     /// <summary>
+    /// How much damage a bullet does
+    /// </summary>
+    [SerializeField]
+    protected float damage;
+
+    /// <summary>
+    /// How far a bullet can travel
+    /// </summary>
+    [SerializeField]
+    protected float range;
+
+    /// <summary>
     /// The particle effect to show when the bullet hits something
     /// </summary>
     [SerializeField]
@@ -22,7 +34,7 @@ class RaycastBullet : BulletSpawner {
 
             Debug.DrawLine(startPos, hit.point);
 
-            Instantiate(hitParticles, hit.point, Quaternion.Euler(hit.normal));
+            Instantiate(hitParticles, hit.point, Quaternion.LookRotation(hit.normal, hit.collider.transform.up));
         }
     }
 }
