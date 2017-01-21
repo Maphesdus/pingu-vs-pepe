@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 32587271}
   - component: {fileID: 32587270}
   m_Layer: 5
-  m_Name: Pingu vs. Pepe
+  m_Name: 'TEXT: "Pingu vs. Pepe"'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -238,7 +238,7 @@ GameObject:
   - component: {fileID: 1079677092}
   - component: {fileID: 1079677091}
   m_Layer: 5
-  m_Name: Pingu Image
+  m_Name: 'IMAGE: Pingu'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -306,7 +306,7 @@ GameObject:
   - component: {fileID: 1196107320}
   - component: {fileID: 1196107319}
   m_Layer: 5
-  m_Name: Pepe Image
+  m_Name: 'IMAGE: Pepe'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -632,10 +632,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2133009090}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3eb5cdcbea6a32b47a1da646068d7eed, type: 3}
+  m_Script: {fileID: 11500000, guid: a7bc51562443e854eaad61f2228952a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skin: {fileID: 11400000, guid: 8bd9472bb44dca9498a572788c327827, type: 2}
+  skin: {fileID: 11400000, guid: a73dd929bdba93443b27caaef700929b, type: 2}
 --- !u!4 &2133009092
 Transform:
   m_ObjectHideFlags: 0
