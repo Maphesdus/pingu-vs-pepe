@@ -25,7 +25,6 @@ public class Shotgun : Gun {
 
             for(int i = 0; i < bulletsPerShot; i++) {
                 Vector3 offset = Random.onUnitSphere * sphereSize;
-                Debug.Log("Firing bullet wirh offset " + offset);
                 Vector3 bulletDirection = bulletSpawnTransform.forward + offset;
                 bulletSpawner.fire(bulletSpawnTransform.position, bulletDirection);
             }
