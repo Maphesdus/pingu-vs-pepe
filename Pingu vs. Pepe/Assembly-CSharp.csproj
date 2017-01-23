@@ -55,6 +55,7 @@
      <Compile Include="Assets\Code\OverTheShoulderCamera.cs" />
      <Compile Include="Assets\Code\PlayerMovement.cs" />
      <Compile Include="Assets\Code\SimpleCarController.cs" />
+     <Compile Include="Assets\Code\Spin.cs" />
      <Compile Include="Assets\Code\Weapons\AutomaticGun.cs" />
      <Compile Include="Assets\Code\Weapons\Bullet.cs" />
      <Compile Include="Assets\Code\Weapons\ExplosionDamage.cs" />
@@ -69,6 +70,8 @@
      <Compile Include="Assets\Code\lookAtCamera.cs" />
      <Compile Include="Assets\Code\movement2.cs" />
      <Compile Include="Assets\Code\title.cs" />
+     <Compile Include="Assets\GUI\PauseMenuFunctions.cs" />
+     <Compile Include="Assets\GUI\PauseMenuListener.cs" />
      <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
      <None Include="Assets\Standard Assets\ParticleSystems\ParticleSystemsGuidelines.txt" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
@@ -77,9 +80,6 @@
      <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
      <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAdd.shader" />
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -94,9 +94,6 @@
  </Reference>
  <Reference Include="UnityEngine.HoloLens">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Purchasing">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityPurchasing/UnityEngine.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.VR">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
