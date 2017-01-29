@@ -13,6 +13,11 @@ public class PlayerMovement : MonoBehaviour {
     private Vector3 delta;
     private Vector3 movement;
 
+    private bool forward;
+    private bool strafeRight;
+    private bool strafeLeft;
+    private bool backtrack;
+
     private bool grounded = true;
 
     // START:
@@ -23,9 +28,6 @@ public class PlayerMovement : MonoBehaviour {
 	
 	// UPDATE:
 	void Update () {
-        //moveVector = cam.transform.TransformVector(Input.GetAxis("Horizontal") * speed, Input.GetAxis("Jump") * jumpPower, Input.GetAxis("Vertical") * speed);
-        //rBody.MovePosition(rBody.position + moveVector * Time.deltaTime);
-
         delta = new Vector3(Input.GetAxis("Horizontal") * speed, gravity, Input.GetAxis("Vertical") * speed);
         movement = new Vector3(delta.x, delta.y, delta.z);
 
@@ -42,6 +44,49 @@ public class PlayerMovement : MonoBehaviour {
     // ON COLLISION ENTER:
     void OnCollisionEnter(Collision col) {
         if (col.gameObject.tag == "Ground") { grounded = true; }
+    }
+
+    void moveF(){
+        if(!backtrack) forward = true;
+        else backtrack = forward = false;
+    }
+
+    void stopF()
+    {
+        forward = false;
+    }
+
+    void moveB()
+    {
+        if (!forward) backtrack = true;
+        else backtrack = forward = false;
+    }
+
+    void stopB()
+    {
+        backtrack = false;
+    }
+
+    void moveL()
+    {
+        if (!strafeRight) strafeLeft = true;
+        else strafeLeft = strafeRight = false;
+    }
+
+    void stopL()
+    {
+        strafeLeft = false;
+    }
+
+    void moveR()
+    {
+        if (!strafeLeft) strafeRight = true;
+        else strafeRight = strafeLeft = false;
+    }
+
+    void stopR()
+    {
+        strafeRight = false;
     }
 
     // ON COLLISION EXIT:
